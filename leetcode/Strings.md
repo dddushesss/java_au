@@ -1,7 +1,6 @@
 #Strings
 + [Palindromic Substrings](#palindromic-substrings)
 <....>
-
 ## Palindromic Substrings
 https://leetcode.com/problems/palindromic-substrings
 ```java
