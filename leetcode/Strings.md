@@ -1,8 +1,9 @@
 #Strings
 + [Palindromic Substrings](#palindromic-substrings)
 <....>
+
 ## Palindromic Substrings
-https://leetcode.com/problems/palindromic-substrings/
+https://leetcode.com/problems/palindromic-substrings
 ```java
 class Solution {
         public int countSubstrings(String s) {
