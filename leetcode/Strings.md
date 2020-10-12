@@ -1,31 +1,12 @@
 #Strings
-+ [Group Anagrams](#group-anagrams)
++ [Valid Palindrome](#valid-palindrome)
 <....>
-## Group Anagrams
-https://leetcode.com/problems/group-anagrams/
+## Valid Palindrome
+https://leetcode.com/problems/valid-palindrome/
 ```java
 class Solution {
-    public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> res = new ArrayList<>();
-        HashMap<String, List<String>> map = new HashMap<>();
-
-        Arrays.sort(strs);
-        for (int i = 0; i < strs.length; i++) {
-            String temp = strs[i];
-            char[] ch = temp.toCharArray();
-            Arrays.sort(ch);
-            if (map.containsKey(String.valueOf(ch))) {
-                map.get(String.valueOf(ch)).add(strs[i]);
-            } else {
-                List<String> each = new ArrayList<>();
-                each.add(strs[i]);
-                map.put(String.valueOf(ch), each);
-            }
+        public boolean isPalindrome(String s) {
+            return s.replaceAll("[^a-z^A-Z^0-9]","").equalsIgnoreCase(new StringBuilder(s).reverse().toString().replaceAll("[^a-z^A-Z^0-9]",""));
         }
-        for (List<String> item : map.values()) {
-            res.add(item);
-        }
-        return res;
     }
-}
 ```
