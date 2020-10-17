@@ -1,5 +1,4 @@
 public class TransferToMd {
-
     String mdLine;
     String sourceLine;
     TransferToMd(String mdLine, String sourceLine){
