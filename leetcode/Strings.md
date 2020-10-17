@@ -4,6 +4,7 @@
 ## Longest Palindromic Substring
 https://leetcode.com/problems/longest-palindromic-substring/
 ```java
+
 class Solution {
     public String longestPalindrome(String s) {
         int max = 0, idx = 0;
