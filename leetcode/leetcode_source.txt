@@ -1,26 +1,22 @@
-49. Group Anagrams
-https://leetcode.com/problems/group-anagrams/
-public class Solution {
-    public List<List<String>> groupAnagrams(String[] strs) {
-        List<List<String>> res = new ArrayList<>();
-        HashMap<String, List<String>> map = new HashMap<>();
-
-        Arrays.sort(strs);s
-        for (int i = 0; i < strs.length; i++) {
-            String temp = strs[i];
-            char[] ch = temp.toCharArray();
-            Arrays.sort(ch);
-            if (map.containsKey(String.valueOf(ch))) {
-                map.get(String.valueOf(ch)).add(strs[i]);
-            } else {
-                List<String> each = new ArrayList<>();
-                each.add(strs[i]);
-                map.put(String.valueOf(ch), each);
+5. Longest Palindromic Substring
+https://leetcode.com/problems/longest-palindromic-substring/
+class Solution {
+    public String longestPalindrome(String s) {
+        int max = 0, idx = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int len1 = extend(s, i, i), len2 = extend(s, i, i + 1);
+            if (max < Math.max(len1, len2)) {
+                idx = (len1 > len2) ? (i - len1 / 2) : (i - len2 / 2 + 1);
+                max = Math.max(len1, len2);
             }
         }
-        for (List<String> item : map.values()) {
-            res.add(item);
-        }
-        return res;
+        return s.substring(idx, idx + max);
+    }
+
+    private int extend(String s, int i, int j) {
+        for (; i >= 0 && j < s.length(); i--, j++)
+            if (s.charAt(i) != s.charAt(j))
+                break;
+        return j - i - 2 + 1;
     }
 }
