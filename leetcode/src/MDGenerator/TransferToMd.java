@@ -1,7 +1,9 @@
+package MDGenerator;
 public class TransferToMd {
+
     String mdLine;
     String sourceLine;
-    TransferToMd(String mdLine, String sourceLine){
+    public TransferToMd(String mdLine, String sourceLine){
         this.mdLine=mdLine;
         this.sourceLine=sourceLine;
     }
