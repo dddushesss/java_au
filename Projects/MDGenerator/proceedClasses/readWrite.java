@@ -1,4 +1,4 @@
-package MDGenerator;
+package proceedClasses;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -11,21 +11,21 @@ public class readWrite {
     static String mdPath;
     static String sourcePath;
 
-    public readWrite(String mdPath, String sourcePath){
-        this.mdPath = mdPath;
-        this.sourcePath = sourcePath;
+    public readWrite(String mdPath, String sourcePath) {
+        readWrite.mdPath = mdPath;
+        readWrite.sourcePath = sourcePath;
     }
 
 
-    public static String Read(char file){
+    public String Read(char file) {
         String line = "";
-        if(file == 's')
+        if (file == 's')
             try (Scanner scanner = new Scanner(Paths.get(sourcePath), StandardCharsets.UTF_8.name())) {
                 line = scanner.useDelimiter("\\A").next();
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
             }
-        else if(file == 'm')
+        else if (file == 'm')
             try (Scanner scanner = new Scanner(Paths.get(mdPath), StandardCharsets.UTF_8.name())) {
                 line = scanner.useDelimiter("\\A").next();
             } catch (IOException ex) {
@@ -34,7 +34,7 @@ public class readWrite {
         return line;
     }
 
-    public static void Write(String Line){
+    public void Write(String Line) {
         File fileStreamW = new File(mdPath);
         FileWriter fr = null;
         try {
@@ -42,11 +42,9 @@ public class readWrite {
             fr.write(Line);
         } catch (IOException e) {
             e.printStackTrace();
-        }finally{
+        } finally {
             try {
-                if (fr == null) {
-                    throw new AssertionError();
-                }
+                assert fr != null;
                 fr.close();
             } catch (IOException e) {
                 e.printStackTrace();
