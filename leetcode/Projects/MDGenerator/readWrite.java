@@ -1,3 +1,4 @@
+package MDGenerator;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -10,14 +11,14 @@ public class readWrite {
     static String mdPath;
     static String sourcePath;
 
-    readWrite(String mdPath, String sourcePath){
+    public readWrite(String mdPath, String sourcePath){
         this.mdPath = mdPath;
         this.sourcePath = sourcePath;
     }
 
 
-    static String Read(char file){
-        String line = new String();
+    public static String Read(char file){
+        String line = "";
         if(file == 's')
             try (Scanner scanner = new Scanner(Paths.get(sourcePath), StandardCharsets.UTF_8.name())) {
                 line = scanner.useDelimiter("\\A").next();
@@ -33,7 +34,7 @@ public class readWrite {
         return line;
     }
 
-    static void Write(String Line){
+    public static void Write(String Line){
         File fileStreamW = new File(mdPath);
         FileWriter fr = null;
         try {
@@ -43,6 +44,9 @@ public class readWrite {
             e.printStackTrace();
         }finally{
             try {
+                if (fr == null) {
+                    throw new AssertionError();
+                }
                 fr.close();
             } catch (IOException e) {
                 e.printStackTrace();
