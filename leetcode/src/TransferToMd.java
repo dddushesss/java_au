@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class TransferToMd {
     String mdLine;
     String sourceLine;
@@ -7,6 +11,7 @@ public class TransferToMd {
     }
     public String formatToMd(){
         String[] mdSplitArray = mdLine.split("<....>");
+        List<String> oldMdStr = new ArrayList<>(Arrays.asList(mdLine.split("<....>")));
         mdSplitArray[0] = mdSplitArray[0].concat("+ [");
         mdSplitArray[0] = mdSplitArray[0].concat(sourceLine.substring(sourceLine.indexOf(". ") + 2, sourceLine.indexOf(System.lineSeparator())));
         mdSplitArray[0] = mdSplitArray[0].concat("](#");
