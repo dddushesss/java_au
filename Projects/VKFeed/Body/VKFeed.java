@@ -1,4 +1,4 @@
-package VKFeed;
+package Body;
 
 import java.util.List;
 

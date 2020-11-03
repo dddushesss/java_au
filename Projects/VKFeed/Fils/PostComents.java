@@ -1,4 +1,4 @@
-package VKFeed;
+package Fils;
 
 public class PostComents {
     String avatarLink;
