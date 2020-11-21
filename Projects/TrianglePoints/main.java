@@ -1,10 +1,6 @@
-import classes.*;
+import classes.maxIsoscelesTriangleS;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
 
 class TrianglePoints {
     public static void main(String[] args) throws IOException {
