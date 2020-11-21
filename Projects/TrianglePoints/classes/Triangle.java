@@ -13,11 +13,17 @@ public class Triangle {
     }
 
     private static double getLength(Points a, Points b) {
-        return Math.pow(Math.abs(Math.pow(a.getX()-b.getX(), 2) + Math.pow(a.getY()-b.getY(), 2)), 0.5);
+        return Math.pow(Math.abs(Math.pow(a.getX() - b.getX(), 2) + Math.pow(a.getY() - b.getY(), 2)), 0.5);
     }
 
     public boolean isIsosceles() {
         return getLength(a, b) == getLength(b, c) || (getLength(b, c) == getLength(a, c)) || (getLength(a, c) == getLength(a, b));
+    }
+
+    public boolean isTriangle() {
+        return getLength(a, b) < getLength(b, c) + getLength(a, c)
+                && getLength(b, c) < getLength(a, b) + getLength(a, c)
+                && getLength(a, c) < getLength(a, b) + getLength(b, c);
     }
 
     public double getS() {
@@ -25,7 +31,7 @@ public class Triangle {
         double A = getLength(a, b);
         double B = getLength(a, c);
         double C = getLength(b, c);
-        return Math.pow(p / 2 * (p-A)*(p-B)*(p-C),0.5);
+        return Math.pow(p / 2 * (p - A) * (p - B) * (p - C), 0.5);
     }
 
 }

@@ -1,16 +1,15 @@
-package tests;
-
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class TriangleTest {
-
     @Test
-    void isIsosceles() {
+    void testIsIsosceles() {
     }
 
     @Test
-    void getS() {
+    void isTriangle() {
+    }
+
+    @Test
+    void testGetS() {
     }
 }

@@ -11,7 +11,8 @@ public class IOClass {
     public List<String> readInList(String filePath) throws IOException {
         return Files.readAllLines(Paths.get(filePath));
     }
+
     public void writeInFile(String filePath, String str) throws IOException {
-        Files.writeString(Path.of(filePath),str);
+        Files.writeString(Path.of(filePath), str);
     }
 }
