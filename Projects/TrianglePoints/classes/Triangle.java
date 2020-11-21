@@ -13,7 +13,7 @@ public class Triangle {
     }
 
     private static double getLength(Points a, Points b) {
-        return Math.pow(Math.abs(Math.pow(a.getX(), 2) - Math.pow(b.getX(), 2)), 0.5);
+        return Math.pow(Math.abs(Math.pow(a.getX()-b.getX(), 2) + Math.pow(a.getY()-b.getY(), 2)), 0.5);
     }
 
     public boolean isIsosceles() {

@@ -15,7 +15,7 @@ public class Points {
 
     public Points(String points) {
         this.x = valueOf(points).getX();
-        this.y = valueOf(points).getX();
+        this.y = valueOf(points).getY();
     }
 
     public Points(double x, double y) {
@@ -26,8 +26,9 @@ public class Points {
     private static int numOfPoints = 2;
 
     private Points valueOf(String points) {
-            String a = points.split(" ")[0], b = points.split(" ")[1];
-            return new Points(Double.parseDouble(a), Double.parseDouble(b));
+        String a = points.split(" ")[0];
+        String b = points.strip().split(" ")[1];
+        return new Points(Double.parseDouble(a), Double.parseDouble(b));
     }
 
 
