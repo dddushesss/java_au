@@ -8,6 +8,7 @@ class TriangleTest {
 
     @Test
     void isIsosceles() {
+
     }
 
     @Test
