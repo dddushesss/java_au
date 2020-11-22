@@ -47,7 +47,7 @@ public class Triangle {
         double B = getLength(a, c);
         double C = getLength(b, c);
         double p = (A + B + C)/2;
-        return Math.pow(p * (p - A) * (p - B) * (p - C), 0.5);
+        return Math.sqrt(p * (p - A) * (p - B) * (p - C));
     }
 
 }
