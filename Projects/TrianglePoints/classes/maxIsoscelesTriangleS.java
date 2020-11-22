@@ -1,7 +1,6 @@
 package classes;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,12 +19,17 @@ public class maxIsoscelesTriangleS {
                 .collect(Collectors.toList());
     }
 
-    public double getmaxIsoscelesTriangleS(List<Triangle> triangles) {
+    public String getmaxIsoscelesTriangleS(List<Triangle> triangles) {
         if (triangles.size() > 0) {
-            List<Double> trianglesS = triangles.stream()
-                    .map(Triangle::getS)
-                    .collect(Collectors.toList());
-            return Collections.max(trianglesS);
-        } else return -1;
+            triangles.sort(Triangle.SquareComparator);
+            return "A(" + triangles.get(0).getA().getX() + ' '
+                    + triangles.get(0).getA().getY() + ") "
+                    + "B(" + triangles.get(0).getB().getX() + ' '
+                    + triangles.get(0).getB().getY() + ") "
+                    + "C(" + triangles.get(0).getC().getX() + " "
+                    + triangles.get(0).getC().getY() + ") "
+                    + "S = " + triangles.get(0).getSquare();
+        } else return "Нет треугольников, подходящих под условие задачи";
     }
+
 }
