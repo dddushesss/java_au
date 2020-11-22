@@ -14,10 +14,6 @@ public class Triangle {
         this.c = c;
     }
 
-    public double getSquare() {
-        return getS();
-    }
-
     public Points getA() {
         return a;
     }
@@ -30,7 +26,7 @@ public class Triangle {
         return c;
     }
 
-    private static double getLength(Points a, Points b) {
+    public double getLength(Points a, Points b) {
         return Math.pow(Math.abs(Math.pow(a.getX() - b.getX(), 2) + Math.pow(a.getY() - b.getY(), 2)), 0.5);
     }
 
@@ -46,12 +42,12 @@ public class Triangle {
                 && getLength(a, c) < getLength(a, b) + getLength(b, c);
     }
 
-    private double getS() {
-        double p = getLength(a, b) + getLength(a, c) + getLength(b, c);
+    public double getSquare() {
         double A = getLength(a, b);
         double B = getLength(a, c);
         double C = getLength(b, c);
-        return Math.pow(p / 2 * (p - A) * (p - B) * (p - C), 0.5);
+        double p = (A + B + C)/2;
+        return Math.pow(p * (p - A) * (p - B) * (p - C), 0.5);
     }
 
 }
