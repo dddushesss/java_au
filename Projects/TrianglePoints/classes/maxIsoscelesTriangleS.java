@@ -20,16 +20,8 @@ public class maxIsoscelesTriangleS {
     }
 
     public String getmaxIsoscelesTriangleS(List<Triangle> triangles) {
-        if (triangles.size() > 0) {
-            triangles.sort(Triangle.SquareComparator);
-            return "A(" + triangles.get(0).getA().getX() + ' '
-                    + triangles.get(0).getA().getY() + ") "
-                    + "B(" + triangles.get(0).getB().getX() + ' '
-                    + triangles.get(0).getB().getY() + ") "
-                    + "C(" + triangles.get(0).getC().getX() + " "
-                    + triangles.get(0).getC().getY() + ") "
-                    + "S = " + triangles.get(0).getSquare();
-        } else return "Нет треугольников, подходящих под условие задачи";
-    }
+        triangles.sort(Triangle.SquareComparator);
+        return triangles.get(0).toString();
 
+    }
 }
