@@ -1,26 +1,26 @@
-public class MyLinkedList {
+public class MyLinkedList<T> {
 
     ListNode head, tail;
     int size;
 
     class ListNode {
-        int val;
+        T val;
         ListNode next;
         ListNode pre;
 
-        ListNode(int value) {
+        ListNode(T value) {
             this.val = value;
         }
     }
 
     public MyLinkedList() {
-        head = new ListNode(0);
-        tail = new ListNode(0);
+        head = new ListNode(null);
+        tail = new ListNode(null);
         head.next = tail;
         tail.pre = head;
     }
 
-    public int get(int index) {
+    public T get(int index) {
         if (index < 0 || index >= size) throw new UnsupportedOperationException();
         ListNode curr = head;
         for (int i = 0; i <= index; i++) {
@@ -29,15 +29,15 @@ public class MyLinkedList {
         return curr.val;
     }
 
-    public void addAtHead(int val) {
+    public void addAtHead(T val) {
         addAtIndex(0, val);
     }
 
-    public void addAtTail(int val) {
+    public void addAtTail(T val) {
         addAtIndex(size, val);
     }
 
-    public void addAtIndex(int index, int val) {
+    public void addAtIndex(int index, T val) {
         if (index < 0 || index > size) return;
         ListNode curr = head;
         for (int i = 0; i < index; i++) {
