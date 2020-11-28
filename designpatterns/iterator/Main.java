@@ -7,6 +7,10 @@ public class Main {
         for (Student student:list) {
             System.out.println(student);
         }
+        Array3D<Integer> MyInt = new Array3D<>(new Integer[][][]{{{1, 2}, {3, 5}}, {{7, 8}, {9, 10}}});
+        for (var i:MyInt) {
+            System.out.println(i);
+        }
 
     }
     static class Student{
