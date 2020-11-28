@@ -1,7 +1,28 @@
-public class MyLinkedList<T> {
+import java.util.Iterator;
+
+public class MyLinkedList<T> implements Iterable<T> {
 
     ListNode head, tail;
     int size;
+
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            int index = 0;
+            @Override
+            public boolean hasNext() {
+                return index < size;
+            }
+
+            @Override
+            public T next() {
+                if(!hasNext()) {
+                    throw new UnsupportedOperationException();
+                }
+                return get(index++);
+            }
+        };
+    }
 
     class ListNode {
         T val;
