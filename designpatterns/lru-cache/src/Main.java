@@ -1,12 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        LRUCache<String, Student> cache = new LRUCache(3);
-        Student student = new Student("Ivan", "Ivanov", 2);
-        Student student1 = new Student("Ivan", "Petrov", 2);
-        cache.put(student.getSurname(), student);
-        student.setGroup(5);
-        cache.put(student1.getSurname(),student1);
-        System.out.printf(String.valueOf(cache));
+        LRULinkedHashMap<String, Integer> cache1 = new LRULinkedHashMap<>(2);
+        cache1.put("1", 1);
+        cache1.put("2", 2);
+        cache1.get("1");
+        cache1.put("3", 3);
+        cache1.put("4", 4);
     }
 }
