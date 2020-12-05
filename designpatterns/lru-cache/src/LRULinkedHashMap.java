@@ -2,11 +2,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LRULinkedHashMap<K, V> {
-    private Map<K, V> cache;
-    private int capacity;
+    private final Map<K, V> cache;
 
     public LRULinkedHashMap(int capacity) {
-        this.capacity = capacity;
         cache = new LinkedHashMap<>(capacity, 0.75f, true) {
             @Override
             protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
@@ -17,7 +15,7 @@ public class LRULinkedHashMap<K, V> {
 
     @Override
     public String toString() {
-        return cache.values().toString();
+        return cache.values().toString() + '\n';
     }
 
     public V get(K key) {
