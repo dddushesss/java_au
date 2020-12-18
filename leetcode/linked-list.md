@@ -1,17 +1,23 @@
 #Linked List
-+ [Middle of the Linked List](#middle-of-the-linked-list)
+
++ [Intersection of Two Linked Lists](#intersection-of-two-linked-lists/submissions)
 <....>
-## Middle of the Linked List
-https://leetcode.com/problems/middle-of-the-linked-list
+## Intersection of Two Linked Lists
+https://leetcode.com/problems/intersection-of-two-linked-lists/submissions
 ```java
 class Solution {
-    public ListNode middleNode(ListNode head) {
-        ListNode slow = head, fast = head;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+   public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if(headA == null || headB == null) return null;
+
+        ListNode a = headA;
+        ListNode b = headB;
+
+        while( a != b){
+            a = a == null? headB : a.next;
+            b = b == null? headA : b.next;
         }
-        return slow;
+
+        return a;
     }
 }
 ```
