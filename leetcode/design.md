@@ -1,1 +1,50 @@
 #Design
++ [Implement Queue using Stacks](#implement-queue-using-stacks)
+<....>
+## Implement Queue using Stacks
+https://leetcode.com/problems/implement-queue-using-stacks/submissions
+```java
+class MyQueue {
+
+    Stack<Integer> s1;
+    Stack<Integer> s2;
+
+    public MyQueue() {
+        s1 = new Stack<>();
+        s2 = new Stack<>();
+    }
+
+    Integer firstEle;
+
+    public void push(int x) {
+        if (firstEle == null) {
+            firstEle = x;
+        }
+        s1.push(x);
+    }
+
+
+    public int pop() {
+        while (!s1.empty()) {
+            s2.push(s1.pop());
+        }
+        int p = s2.pop();
+        firstEle = null;
+        while (!s2.empty()) {
+            if (firstEle == null) {
+                firstEle = s2.peek();
+            }
+            s1.push(s2.pop());
+        }
+        return p;
+    }
+
+    public int peek() {
+        return firstEle;
+    }
+
+    public boolean empty() {
+        return s1.empty();
+    }
+}
+```
