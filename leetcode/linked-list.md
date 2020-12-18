@@ -1,17 +1,42 @@
 #Linked List
-+ [Middle of the Linked List](#middle-of-the-linked-list)
+
++ [Palindrome Linked List](#palindrome-linked-list)
 <....>
-## Middle of the Linked List
-https://leetcode.com/problems/middle-of-the-linked-list
+## Palindrome Linked List
+https://leetcode.com/problems/palindrome-linked-list
 ```java
 class Solution {
-    public ListNode middleNode(ListNode head) {
-        ListNode slow = head, fast = head;
+    public boolean isPalindrome(ListNode head) {
+        ListNode fast = head, slow = head;
         while (fast != null && fast.next != null) {
-            slow = slow.next;
             fast = fast.next.next;
+            slow = slow.next;
         }
-        return slow;
+        if (fast != null) { // odd nodes: let right half smaller
+            slow = slow.next;
+        }
+        slow = reverse(slow);
+        fast = head;
+
+        while (slow != null) {
+            if (fast.val != slow.val) {
+                return false;
+            }
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return true;
+    }
+
+    public ListNode reverse(ListNode head) {
+        ListNode prev = null;
+        while (head != null) {
+            ListNode next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+        }
+        return prev;
     }
 }
 ```
