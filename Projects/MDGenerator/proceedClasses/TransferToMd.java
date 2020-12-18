@@ -21,7 +21,7 @@ public class TransferToMd {
                 + ")" + System.lineSeparator() + "<....>");
         oldMdStr.add(System.lineSeparator() + "## " + sourceLine.substring(sourceLine.indexOf(". ") + 2, sourceLine.indexOf(System.lineSeparator()))
                 + System.lineSeparator() + sourceLine.substring(sourceLine.indexOf("https://"), sourceLine.indexOf("/" + System.lineSeparator()))
-                + System.lineSeparator() + "```java" + System.lineSeparator() + sourceLine.substring(sourceLine.indexOf("class Solution"))
+                + System.lineSeparator() + "```java" + System.lineSeparator() + sourceLine.substring(sourceLine.indexOf("class "))
                 + System.lineSeparator() + "```");
         return oldMdStr.stream()
                 .map(String::valueOf)
