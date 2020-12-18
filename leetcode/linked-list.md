@@ -1,1 +1,77 @@
 #Linked List
++ [LRU Cache](#lru-cache)
+<....>
+## LRU Cache
+https://leetcode.com/problems/lru-cache
+```java
+public class LRUCache {
+
+    class ListNode {
+        int val;
+        int key;
+        ListNode next;
+        ListNode pre;
+
+        public ListNode(int key, int val) {
+            this.val = val;
+            this.key = key;
+        }
+    }
+    public void addNode(ListNode node) {
+       cache.put(node.key, node);
+       ListNode headNext = head.next;
+       head.next = node;
+       node.pre = head;
+       headNext.pre = node;
+       node.next = headNext;
+    }
+
+    public void removeNode(ListNode node) {
+        cache.remove(node.key);
+        node.pre.next = node.next;
+        node.next.pre = node.pre;
+    }
+
+    private void moveToHead(ListNode node){
+        this.removeNode(node);
+        this.addNode(node);
+    }
+
+    private ListNode popTail(){
+        ListNode res = tail.pre;
+        this.removeNode(res);
+        return res;
+    }
+
+
+    private Map<Integer, ListNode> cache = new HashMap<>();
+    private int capacity;
+    private ListNode head = new ListNode(0,0), tail = new ListNode(0,0);
+
+    public LRUCache(int _capacity) {
+        capacity = _capacity;
+        head.next = tail;
+        tail.pre = head;
+    }
+
+    public int get(int key){
+        if(cache.containsKey(key)){
+            ListNode node = cache.get(key);
+            removeNode(node);
+            addNode(node);
+            return node.val;
+        }
+        else {
+            return -1;
+        }
+    }
+
+    public void put(int key, int value){
+        if(cache.containsKey(key))
+            removeNode(cache.get(key));
+        if(cache.size() == capacity)
+            removeNode(tail.pre);
+        addNode(new ListNode(key, value));
+    }
+}
+```
