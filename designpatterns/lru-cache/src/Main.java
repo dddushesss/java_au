@@ -1,0 +1,12 @@
+public class Main {
+
+    public static void main(String[] args) {
+        LRULinkedHashMap<String, Integer> cache1 = new LRULinkedHashMap<>(2);
+        cache1.put("1", 1);
+        cache1.put("2", 2);
+        System.out.println(cache1.get("1").toString());
+        cache1.put("3", 3);
+        cache1.put("4", 4);
+        System.out.println(cache1.toString());
+    }
+}
