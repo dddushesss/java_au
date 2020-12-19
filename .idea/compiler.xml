@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="gdradle" target="15" />
+      <module name="gdradle.main" target="15" />
+      <module name="gdradle.test" target="15" />
+      <module name="Projects" target="15" />
+      <module name="Projects.main" target="15" />
+      <module name="Projects.test" target="15" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
