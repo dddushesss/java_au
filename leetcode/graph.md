@@ -1,5 +1,8 @@
-787. Cheapest Flights Within K Stops
-https://leetcode.com/problems/cheapest-flights-within-k-stops/
++ [Cheapest Flights Within K Stops](#cheapest-flights-within-k-stops)
+<....>
+## Cheapest Flights Within K Stops
+https://leetcode.com/problems/cheapest-flights-within-k-stops
+```java
 class Solution {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
         int[] prices = new
@@ -36,3 +39,4 @@ class Solution {
 
     }
 }
+```
