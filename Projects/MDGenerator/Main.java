@@ -1,4 +1,6 @@
-import proceedClasses.*;
+package MDGenerator;
+import MDGenerator.proceedClasses.TransferToMd;
+import MDGenerator.proceedClasses.readWrite;
 
 public class Main {
 

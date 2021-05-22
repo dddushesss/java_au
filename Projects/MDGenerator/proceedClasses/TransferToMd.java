@@ -1,4 +1,4 @@
-package proceedClasses;
+package MDGenerator.proceedClasses;
 
 import java.util.ArrayList;
 import java.util.Arrays;

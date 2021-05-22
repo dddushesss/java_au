@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9497e40d-dde4-4025-887c-89cfd7fa5727" name="Default Changelist" comment="Added Cheapest Flights Within K Stops" />
+    <list default="true" id="9497e40d-dde4-4025-887c-89cfd7fa5727" name="Default Changelist" comment="fixes">
+      <change afterPath="$PROJECT_DIR$/java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/MDGenerator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/MDGenerator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/TransferToMd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/TransferToMd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/readWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/readWrite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java/Main.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="openjdk-16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Projects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -42,7 +50,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-16" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="MDGenerator.Main" />
       <module name="java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621663982850</updated>
       <workItem from="1621663984433" duration="521000" />
-      <workItem from="1621664520983" duration="1860000" />
+      <workItem from="1621664520983" duration="2203000" />
     </task>
     <task id="LOCAL-00001" summary="Added Cheapest Flights Within K Stops">
       <created>1621666022350</created>
@@ -80,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621666022351</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixes">
+      <created>1621666420022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621666420022</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +116,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added Cheapest Flights Within K Stops" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Cheapest Flights Within K Stops" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
 </project>

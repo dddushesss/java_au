@@ -1,4 +1,4 @@
-package proceedClasses;
+package MDGenerator.proceedClasses;
 
 import java.io.File;
 import java.io.FileWriter;
