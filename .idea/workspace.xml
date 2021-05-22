@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9497e40d-dde4-4025-887c-89cfd7fa5727" name="Default Changelist" comment="fixes">
-      <change beforePath="$PROJECT_DIR$/leetcode/leetcode_source.txt" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/leetcode_source.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projects/MDGenerator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/MDGenerator/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +118,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added Cheapest Flights Within K Stops" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="added Shortest Path in Binary Matrix" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Shortest Path in Binary Matrix" />
   </component>
 </project>

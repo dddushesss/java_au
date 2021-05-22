@@ -1,5 +1,8 @@
-355. Design Twitter
-https://leetcode.com/problems/design-twitter/
++ [Design Twitter](#design-twitter)
+<....>
+## Design Twitter
+https://leetcode.com/problems/design-twitter
+```java
 class Twitter {
 
     private class Tweet {
@@ -84,3 +87,4 @@ class Twitter {
  * obj.follow(followerId,followeeId);
  * obj.unfollow(followerId,followeeId);
  */
+```
