@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9497e40d-dde4-4025-887c-89cfd7fa5727" name="Default Changelist" comment="fixes">
-      <change afterPath="$PROJECT_DIR$/java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/MDGenerator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/MDGenerator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/TransferToMd.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/TransferToMd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/readWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/MDGenerator/proceedClasses/readWrite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/java/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode/leetcode_source.txt" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/leetcode_source.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Shortest_Path_in_Binary_Matrix" />
+        <entry key="$PROJECT_DIR$" value="MDGenerator" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -79,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621663982850</updated>
       <workItem from="1621663984433" duration="521000" />
-      <workItem from="1621664520983" duration="2203000" />
+      <workItem from="1621664520983" duration="2710000" />
     </task>
     <task id="LOCAL-00001" summary="Added Cheapest Flights Within K Stops">
       <created>1621666022350</created>
@@ -95,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621666420022</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixes">
+      <created>1621666749640</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621666749640</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

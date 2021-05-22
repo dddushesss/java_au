@@ -1,5 +1,9 @@
-1091. Shortest Path in Binary Matrix
-https://leetcode.com/problems/shortest-path-in-binary-matrix/submissions/
++ [Shortest Path in Binary Matrix](#shortest-path-in-binary-matrix/submissions)
+<....>
+## Shortest Path in Binary Matrix
+https://leetcode.com/problems/shortest-path-in-binary-matrix/submissions
+
+```java
 class Solution {
     public int shortestPathBinaryMatrix(int[][] grid) {
         int tr = grid.length - 1;
@@ -76,6 +80,7 @@ class Solution {
     private static boolean isValid(int x, int y, int[][] grid, boolean[][] visited) {
         return x >= 0 && y >= 0 && x < grid.length
                 && y < grid[0].length && grid[x][y] == 0
-                && !visited[x][y] == true;
+                && !visited[x][y];
     }
 }
+```
